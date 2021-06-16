@@ -2,57 +2,53 @@ import React from "react";
 
 import styled from "styled-components";
 import { About } from "../styles";
+import Toggle from "./toggle";
+import { AnimateSharedLayout } from "framer-motion";
 
-const faq = () => {
+const FaqSection = () => {
   return (
     <Faq>
       <h2>
         Any Questions? <span>FAQ</span>
       </h2>
-      <div className="questions">
-        <h4>How do I start</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque,
-            provident.
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="questions">
-        <h4>How Do I Pay</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque,
-            provident.
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="questions">
-        <h4>How do I Call</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque,
-            provident.
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="questions">
-        <h4>Timing</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque,
-            provident.
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
+      <AnimateSharedLayout>
+        <Toggle title="How do I start">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque,
+              provident.
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="How Do I Pay">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque,
+              provident.
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="How do I Call">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque,
+              provident.
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="Timing">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque,
+              provident.
+            </p>
+          </div>
+        </Toggle>
+      </AnimateSharedLayout>
     </Faq>
   );
 };
@@ -84,4 +80,4 @@ const Faq = styled(About)`
   }
 `;
 
-export default faq;
+export default FaqSection;
